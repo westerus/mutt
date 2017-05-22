@@ -21,4 +21,5 @@ RUN $PKGUPDATE \
   && $PKGINSTALL ca-certificates mutt \
   && $DELTEMP
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
+ENTRYPOINT ["/entry-point.sh"]
+CMD ["mutt", "-h"]
